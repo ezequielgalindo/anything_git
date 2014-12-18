@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="UIMotus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-qE-0b8">
+                                <rect key="frame" x="40" y="265" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQg-WS-ytm">
+                                <rect key="frame" x="40" y="379" width="240" height="36"/>
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.68627450980392157" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="tintColor" red="0.27450980392156865" green="0.69019607843137254" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="validateUser" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4XQ-FZ-Fwv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-30-gCA">
+                                <rect key="frame" x="40" y="294" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9sz-qE-0b8" secondAttribute="centerX" id="2sB-Sl-TEG"/>
+                            <constraint firstItem="pQg-WS-ytm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="3WN-GZ-kGv"/>
+                            <constraint firstAttribute="centerY" secondItem="pQg-WS-ytm" secondAttribute="centerY" constant="-113" id="EgT-Gr-7MU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kD-30-gCA" secondAttribute="trailing" constant="24" id="S1Y-vV-RQh"/>
+                            <constraint firstAttribute="centerY" secondItem="8kD-30-gCA" secondAttribute="centerY" constant="-25" id="UAi-zn-ZlN"/>
+                            <constraint firstItem="8kD-30-gCA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="XXV-kQ-IXi"/>
+                            <constraint firstAttribute="centerX" secondItem="8kD-30-gCA" secondAttribute="centerX" id="dE5-8Z-IrI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pQg-WS-ytm" secondAttribute="trailing" constant="24" id="mBt-Wy-ukH"/>
+                            <constraint firstAttribute="centerY" secondItem="9sz-qE-0b8" secondAttribute="centerY" constant="4" id="qVI-Av-BNV"/>
+                            <constraint firstAttribute="centerX" secondItem="pQg-WS-ytm" secondAttribute="centerX" id="sua-Ws-VdX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9sz-qE-0b8" secondAttribute="trailing" constant="24" id="uiW-dl-qKU"/>
+                            <constraint firstItem="pQg-WS-ytm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="vFD-h2-P6e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pQg-WS-ytm" secondAttribute="trailing" constant="24" id="waM-Pe-3DW"/>
+                            <constraint firstItem="9sz-qE-0b8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="yvi-L9-92A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h4Z-yS-qJR"/>
+                    <connections>
+                        <outlet property="textPassword" destination="8kD-30-gCA" id="Tf0-4C-vdn"/>
+                        <outlet property="textUser" destination="9sz-qE-0b8" id="HAA-Gf-PID"/>
+                        <outlet property="validateButton" destination="pQg-WS-ytm" id="vPy-rj-91b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-8287"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="luh-r0-5DC">
+            <objects>
+                <viewController storyboardIdentifier="view3" id="Yp5-cP-Xr5" customClass="SecondViewController" customModule="UIMotus" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1uX-vL-IgJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="4tj-RB-Ai6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VO3-iR-0el">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-dg-Ok6">
+                                <rect key="frame" x="40" y="369" width="240" height="36"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.68627450980000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="tintColor" red="0.27450980390000002" green="0.69019607839999997" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back" destination="Yp5-cP-Xr5" eventType="touchUpInside" id="lFf-fB-Xvm"/>
+                                    <action selector="validateUser" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CCG-4Q-05r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="PMR-dg-Ok6" id="Hk4-S3-2gv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rU-nN-COB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="-8275"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
